@@ -12,19 +12,86 @@
     box-sizing: border-box;
 }
 
+body{
+    font-family: Roboto;
+}
+
 nav ul{
     list-style-type: none;
 }
-
-
 
 /* ------------------------------------------------------------- */
 /*                            HEADER                             */
 /* ------------------------------------------------------------- */
 header{
-    background-color: red;
-    width: var(--header-w);
+    background-color: black;
+    color:#888;
+    min-width: var(--header-w);
     height: 100%;
+    font-weight: bold;
+    padding:1rem 0;
+}
+header .logo{
+    width:60%;
+}
+
+header img,
+header h3,
+header ul:nth-child(3){
+    margin-left: 1rem;
+}
+/* nav */
+header nav{
+    font-size: .8rem;
+}
+header nav ul{
+    padding-bottom:.1rem;
+}
+header nav > ul > li{
+    margin:1rem 0;
+}
+header li label{
+    display: block;
+    height:25px;
+}
+header li .header-icon{
+    height:25px;
+    vertical-align: middle;
+    filter: invert(61%) sepia(9%) saturate(0%) hue-rotate(184deg) brightness(87%) contrast(87%);
+    -webkit-filter: invert(61%) sepia(9%) saturate(0%) hue-rotate(184deg) brightness(87%) contrast(87%);
+}
+header label > .selected{
+    width: 4px;
+    height: 100%;
+    top:0;
+    left:0px;
+}
+/* header playlist */
+.add > .text{
+    line-height: 30px;
+}
+.add-icon{
+    background-color: #888;
+    width: 30px;
+    height:30px;
+    margin-right: .6rem;
+}
+.add-icon .text{
+    color:black;
+    font-size: 1.5rem;
+    margin: auto;
+}
+/* events */
+header li:hover .add-icon{
+    background-color: white;
+}
+header li:hover,
+header label:hover,
+header li:hover .header-icon{
+    color:white;
+    filter: none;
+    -webkit-filter: none;
+    cursor: pointer;
 }
 
 /* ------------------------------------------------------------- */
@@ -34,18 +101,24 @@ main{
     background-color: rebeccapurple;
     flex-grow: 1;
 }
-
+/* nav */
 main nav{
     margin-bottom: 4rem;
-    width: 100%;
     padding:1rem;
     font-size: .8rem;
 }
 main nav ul{
-    margin: 0 auto;
+    margin: auto;
 }
 main nav > ul > li{
     margin:0 .5rem 2rem;
+}
+main label > .selected{
+    width: 2rem;
+    height: 2px;
+    bottom :-2px;
+    left:50%;
+    transform: translate(-50%,0);
 }
 
 /* ------------------------------------------------------------- */
@@ -107,6 +180,11 @@ footer .player-sec{
     text-transform: uppercase;
 }
 
+/* button */
+.btn{
+
+}
+
 /* position */
 .p-relative{
     position: relative;
@@ -116,7 +194,7 @@ footer .player-sec{
 }
 
 /* input category */
-input[name="category"]{
+input.hidden{
     display: none;
 }
 label{
@@ -126,18 +204,13 @@ label{
     -ms-user-select: none;
     
 }
-label > .selected{
-    width: 2rem;
-    height: 4px;
+.selected{
     background-color: greenyellow;
-    bottom :-4px;
-    left:50%;
-    transform: translate(-50%,0);
 }
-input[name="category"]:checked + label > .selected{
+input.hidden:checked + label > .selected{
     display:block;
 }
-:not(input[name="category"]:checked) + label > .selected{
+:not(input.hidden:checked) + label > .selected{
     display: none;
 }
 

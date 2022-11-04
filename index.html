@@ -7,57 +7,132 @@
 
     <title>Spotify</title>
 
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"> 
+    
     <!-- main style -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container flex ">
         <header>
-
+            <a href="#">
+                <img class="logo" src="img/logo.svg" alt="Spotify">
+            </a>
+            <nav>
+                <ul>
+                    <li>
+                        <input class="hidden" type="radio" name="header" id="home">
+                        <label for="home" class="p-relative">
+                            <img class="header-icon" src="img/home.svg">
+                            Home
+                            <div class="selected p-absolute"></div>
+                        </label>
+                    </li>
+                    <li>
+                        <input class="hidden" type="radio" name="header" id="search">
+                        <label for="search" class="p-relative">
+                            <img class="header-icon" src="img/search.svg">
+                            Cerca
+                            <div class="selected p-absolute"></div>
+                        </label>
+                    </li>
+                    <li>
+                        <input class="hidden" type="radio" name="header" id="library">
+                        <label for="library" class="p-relative">
+                            <img class="header-icon" src="img/libreria.svg">
+                            La tua libreria
+                            <div class="selected p-absolute"></div>
+                        </label>
+                    </li>
+                </ul>
+                <!-- playlist -->
+                <h3 class="uppercase">playlist</h3>
+                <ul>
+                    <li>
+                        <div class="add flex">
+                            <div class="add-icon flex">
+                                <div class="text">+</div>
+                            </div>
+                            <span class="text">Crea Playlist</span>
+                        </div>
+                    </li>
+                    <li>
+                        Nome Playlist
+                    </li>
+                    <li>
+                        Nome Playlist
+                    </li>
+                    <li>
+                        Nome Playlist
+                    </li>
+                    <li>
+                        Nome Playlist
+                    </li>
+                    <li>
+                        Nome Playlist
+                    </li>
+                    <li>
+                        Nome Playlist
+                    </li>
+                    <li>
+                        Nome Playlist
+                    </li>
+                    <li>
+                        Nome Playlist
+                    </li>
+                </ul>
+            </nav>
         </header>
         <main>
             <section id ="premium">
                 <button class="btn uppercase">effettua l&apos;upgrade</button>
             </section>
-            <nav>
+            <nav class="flex-center flex-wrap">
                 <ul class="flex-center flex-wrap">
                     <li>
-                        <input type="radio" name="category" id="trend">
+                        <input class="hidden" type="radio" name="category" id="trend">
                         <label for="trend" class="uppercase p-relative">
                             in evidenza
                             <div class="selected p-absolute"></div>
                         </label>
                     </li>
                     <li>
-                        <input type="radio" name="category" id="podcast">
+                        <input class="hidden" type="radio" name="category" id="podcast">
                         <label for="podcast" class="uppercase p-relative">
                             podcast
                             <div class="selected p-absolute"></div>
                         </label>
                     </li>
                     <li>
-                        <input type="radio" name="category" id="charts">
+                        <input class="hidden" type="radio" name="category" id="charts">
                         <label for="charts" class="uppercase p-relative">
                             classifiche
                             <div class="selected p-absolute"></div>
                         </label>
                     </li>
                     <li>
-                        <input type="radio" name="category" id="gen">
+                        <input class="hidden" type="radio" name="category" id="gen">
                         <label for="gen" class="uppercase p-relative">
                             generi e mood
                             <div class="selected p-absolute"></div>
                         </label>
                     </li>
                     <li>
-                        <input type="radio" name="category" id="newest">
+                        <input class="hidden" type="radio" name="category" id="newest">
                         <label for="newest" class="uppercase p-relative">
                             nuove uscite
                             <div class="selected p-absolute"></div>
                         </label>
                     </li>
                     <li>
-                        <input type="radio" name="category" id="discover">
+                        <input class="hidden" type="radio" name="category" id="discover">
                         <label for="discover" class="uppercase p-relative">
                             scopri
                             <div class="selected p-absolute"></div>
