@@ -1,5 +1,6 @@
 :root{
     --footer-h : 100px;
+    --header-w : 230px;
 }
 
 *,
@@ -11,12 +12,18 @@
     box-sizing: border-box;
 }
 
+nav ul{
+    list-style-type: none;
+}
+
+
+
 /* ------------------------------------------------------------- */
 /*                            HEADER                             */
 /* ------------------------------------------------------------- */
 header{
     background-color: red;
-    width: 230px;
+    width: var(--header-w);
     height: 100%;
 }
 
@@ -26,6 +33,19 @@ header{
 main{
     background-color: rebeccapurple;
     flex-grow: 1;
+}
+
+main nav{
+    margin-bottom: 4rem;
+    width: 100%;
+    padding:1rem;
+    font-size: .5rem;
+}
+main nav ul{
+    margin: 0 auto;
+}
+main nav > ul > li{
+    margin:0 .5rem ;
 }
 
 /* ------------------------------------------------------------- */
@@ -47,6 +67,74 @@ footer{
 .flex{
     display: flex;
 }
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-between{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* cards */
+.cards{
+    margin-bottom: 2rem;
+}
+.cards-2it{
+    width: calc(((100vw - var(--header-w)) / 3 - .8rem));
+}
+.card{
+    /* da assegnare all imagine della card */
+    width: calc((100vw - var(--header-w)) / 6 - .8rem);
+    height: calc((100vw - var(--header-w)) / 6 - .8rem);
+    max-width: 150px;
+    max-height: 150px;
+    background-color: aqua;
+}
+
+/* text */
+.uppercase{
+    text-transform: uppercase;
+}
+
+/* position */
+.p-relative{
+    position: relative;
+}
+.p-absolute{
+    position: absolute;
+}
+
+/* input category */
+input[name="category"]{
+    display: none;
+}
+label{
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    
+}
+label > .selected{
+    width: 2rem;
+    height: 4px;
+    background-color: greenyellow;
+    bottom :-4px;
+    left:50%;
+    transform: translate(-50%,0);
+}
+input[name="category"]:checked + label > .selected{
+    display:block;
+}
+:not(input[name="category"]:checked) + label > .selected{
+    display: none;
+}
+
+/* ------------------------------------------------------------- */
+/*                              IDS                              */
+/* ------------------------------------------------------------- */
 
 /* ------------------------------------------------------------- */
 /*                         RESPONSIVENESS                        */
@@ -65,7 +153,7 @@ footer{
 }
 /* extra small <576 */
 @media screen and (max-width: 575px) {
-    header{
-        width: 60px;
+    :root{
+        --header-w: 60px;
     }
 }
