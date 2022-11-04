@@ -47,3 +47,25 @@ footer{
 .flex{
     display: flex;
 }
+
+/* ------------------------------------------------------------- */
+/*                         RESPONSIVENESS                        */
+/* ------------------------------------------------------------- */
+/* large <1200 */
+@media screen and (max-width: 1199px) {
+    
+}
+/* medium <992 */
+@media screen and (max-width: 991px) {
+    
+}
+/* small <768 */
+@media screen and (max-width: 767px) {
+    
+}
+/* extra small <576 */
+@media screen and (max-width: 575px) {
+    header{
+        width: 60px;
+    }
+}
