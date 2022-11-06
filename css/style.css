@@ -98,11 +98,19 @@ header li:hover .header-icon{
 /*                             MAIN                              */
 /* ------------------------------------------------------------- */
 main{
-    background-color: rebeccapurple;
+    background-color: #141922;
+    color:white;
     flex-grow: 1;
+}
+/* premium */
+#premium{
+    background-color: #080b12;
+    text-align: end;
+    padding:1rem .2rem;
 }
 /* nav */
 main nav{
+    color:#888;
     margin-bottom: 4rem;
     padding:1rem;
     font-size: .8rem;
@@ -182,7 +190,11 @@ footer .player-sec{
 
 /* button */
 .btn{
-
+    background-color: #0000;
+    color:white;
+    border: 2px solid;
+    border-radius: 20px;
+    padding:.5rem 2rem;
 }
 
 /* position */
