@@ -14,6 +14,7 @@
 
 body{
     font-family: 'Poppins';
+    color: white ;
 }
 
 a{
@@ -166,13 +167,32 @@ main .subtitle{
 /*                            FOOTER                             */
 /* ------------------------------------------------------------- */
 footer{
-    background-color: blue;
+    background-color: #282828;
     height: var(--footer-h);
+    padding:1rem;
+}
+footer *{
+    border: 1px solid;
 }
 
+/* song */
 footer .player-sec{
     flex-basis: 33%;
 }
+footer .song-info{
+    padding: 0 .5rem;
+}
+footer .right,
+footer .left{
+    flex-basis: 50px;
+}
+footer .left img{
+    min-width: 50px;
+    width: 100%;
+}
+
+/* player */
+
 
 
 /* ------------------------------------------------------------- */
@@ -216,6 +236,11 @@ footer .player-sec{
     display: flex;
     justify-content: space-between;
 }
+.flex-between-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .flex-start-center{
     display: flex;
     align-items: center;
@@ -247,16 +272,18 @@ footer .player-sec{
 /* gray */
 header,
 .subtitle,
-main > nav{
+main > nav,
+footer .right{
     color:#888;
 }
+
 /* white */
 .btn,
-header .personal .username,
-main{
-    color:white;
+.username,
+header h3,
+footer{
+    color: white;
 }
-
 /* button */
 .btn{
     background-color: #0000;
