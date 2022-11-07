@@ -24,6 +24,7 @@
         <header class="p-relative">
             <a href="#">
                 <img class="logo" src="img/logo.svg" alt="Spotify">
+                <img class="logo-mobile" src="img/logo-small.svg" alt="Spotify">
             </a>
             <nav>
                 <ul>
@@ -31,7 +32,7 @@
                         <input class="hidden" type="radio" name="header" id="home">
                         <label for="home" class="p-relative">
                             <img class="header-icon" src="img/home.svg">
-                            <span>Home</span>
+                            <span class="hidden-on-mobile">Home</span>
                             <div class="selected p-absolute"></div>
                         </label>
                     </li>
@@ -39,7 +40,7 @@
                         <input class="hidden" type="radio" name="header" id="search">
                         <label for="search" class="p-relative">
                             <img class="header-icon" src="img/search.svg">
-                            Cerca
+                            <span class="hidden-on-mobile">Cerca</span> 
                             <div class="selected p-absolute"></div>
                         </label>
                     </li>
@@ -47,7 +48,7 @@
                         <input class="hidden" type="radio" name="header" id="library">
                         <label for="library" class="p-relative">
                             <img class="header-icon" src="img/libreria.svg">
-                            La tua libreria
+                            <span class="hidden-on-mobile">La tua libreria</span> 
                             <div class="selected p-absolute"></div>
                         </label>
                     </li>
@@ -88,14 +89,14 @@
                     </li>
                 </ul>
                 <div class="personal p-absolute">
-                    <a class="" href="#">
+                    <a href="#">
                         <img class="header-icon" src="img/download.svg">
-                        <span class="text">Installa app</span>
+                        <span class="text hidden-on-mobile">Installa app</span>
                     </a>
-                    <div class="divider"></div>
+                    <div class="divider hidden-on-mobile"></div>
                     <a class="flex-start-center" href="#">
                         <img class="icon user-img" src="img/profile.svg">
-                        <h4 class="username">John Doe</h4>
+                        <h4 class="username hidden-on-mobile">John Doe</h4>
                     </a>
                 </div>
             </nav>

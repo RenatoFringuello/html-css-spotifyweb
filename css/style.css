@@ -30,13 +30,15 @@ nav ul{
 /* ------------------------------------------------------------- */
 header{
     background-color: black;
-    color:#888;
     min-width: var(--header-w);
     height: 100%;
     padding:1rem 0;
 }
 header .logo{
     width:60%;
+}
+header .logo-mobile{
+    display: none;
 }
 
 header img,
@@ -92,14 +94,11 @@ header .personal{
     padding:1rem;
 }
 header .personal img{
+    margin: .5rem;
     margin-left:0;
 }
 header .user-img{
     border-radius: 50%;
-    vertical-align: middle;
-}
-header .personal .username{
-    color:white;
 }
 
 /* events */
@@ -110,7 +109,9 @@ header li:hover .icon{
 label:hover,
 label:hover .header-icon,
 a:hover .header-icon,
-a:hover{
+a:hover,
+header input:checked + label,
+header input:checked + label .header-icon{
     color:white;
     filter: none;
     -webkit-filter: none;
@@ -121,8 +122,8 @@ a:hover{
 /*                             MAIN                              */
 /* ------------------------------------------------------------- */
 main{
+    overflow-y: auto;
     background-color: #141922;
-    color:white;
     flex-grow: 1;
 }
 /* premium */
@@ -133,7 +134,6 @@ main{
 }
 /* nav */
 main nav{
-    color:#888;
     margin-bottom: 4rem;
     padding:1rem;
     font-size: .8rem;
@@ -161,7 +161,6 @@ footer{
 }
 
 footer .player-sec{
-    border:1px solid white;
     flex-basis: 33%;
 }
 
@@ -177,7 +176,6 @@ footer .player-sec{
     height: 1px;
     background-color: #888;
     width: 100%;
-    margin:1rem 0;
 }
 
 .center{
@@ -233,14 +231,25 @@ footer .player-sec{
 
 }
 .subtitle{
-    color :#888;
     font-size: .7rem;
+}
+
+/* gray */
+header,
+.subtitle,
+main > nav{
+    color:#888;
+}
+/* white */
+.btn,
+header .personal .username,
+main{
+    color:white;
 }
 
 /* button */
 .btn{
     background-color: #0000;
-    color:white;
     border: 2px solid;
     border-radius: 20px;
     padding:.5rem 2rem;
@@ -298,4 +307,31 @@ input.hidden:checked + label > .selected{
     :root{
         --header-w: 60px;
     }
+
+    /* header */
+    header .logo{
+        display: none;
+    }
+    header .logo-mobile{
+        display: inline;
+        height: 25px;
+    }
+
+    header input.hidden:checked + label > .selected{
+        display: none;
+    }
+
+    header .personal{
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    header .personal img{
+        margin: .5rem 0;
+    }
+    .hidden-on-mobile{
+        display: none;
+    }
+    
 }
