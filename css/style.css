@@ -183,7 +183,7 @@ footer .player-sec{
     height: calc(100vh - var(--footer-h));
 }
 .section-container{
-    padding:2rem 0.5rem 2rem 1rem  ;
+    padding:1rem 0.5rem 1rem 1rem  ;
 }
 .wrapped-img{
     border-radius: 50%;
@@ -222,9 +222,6 @@ footer .player-sec{
 }
 
 /* cards */
-.cards{
-    margin-bottom: 2rem;
-}
 .card{
     width: calc((100% / 6) - 1rem);
     max-width: 140px;
