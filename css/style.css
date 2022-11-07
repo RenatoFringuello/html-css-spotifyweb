@@ -13,7 +13,12 @@
 }
 
 body{
-    font-family: Roboto;
+    font-family: 'Poppins';
+}
+
+a{
+    text-decoration: none;
+    color:inherit;
 }
 
 nav ul{
@@ -28,7 +33,6 @@ header{
     color:#888;
     min-width: var(--header-w);
     height: 100%;
-    font-weight: bold;
     padding:1rem 0;
 }
 header .logo{
@@ -36,25 +40,24 @@ header .logo{
 }
 
 header img,
-header h3,
-header ul:nth-child(3){
+header ul:nth-child(2){
     margin-left: 1rem;
 }
-/* nav */
+/* header nav */
 header nav{
     font-size: .8rem;
 }
 header nav ul{
     padding-bottom:.1rem;
 }
-header nav > ul > li{
+header nav ul > li{
     margin:1rem 0;
 }
 header li label{
     display: block;
     height:25px;
 }
-header li .header-icon{
+header .header-icon{
     height:25px;
     vertical-align: middle;
     filter: invert(61%) sepia(9%) saturate(0%) hue-rotate(184deg) brightness(87%) contrast(87%);
@@ -64,30 +67,50 @@ header label > .selected{
     width: 4px;
     height: 100%;
     top:0;
-    left:0px;
+    left:0;
 }
 /* header playlist */
-.add > .text{
+.add .text{
     line-height: 30px;
 }
-.add-icon{
+.icon{
     background-color: #888;
     width: 30px;
     height:30px;
     margin-right: .6rem;
 }
-.add-icon .text{
+.add .icon .text{
     color:black;
     font-size: 1.5rem;
     margin: auto;
 }
+/* personal */
+header .personal{
+    bottom:0;
+    left:0;
+    width: 100%;
+    padding:1rem;
+}
+header .personal img{
+    margin-left:0;
+}
+header .user-img{
+    border-radius: 50%;
+    vertical-align: middle;
+}
+header .personal .username{
+    color:white;
+}
+
 /* events */
-header li:hover .add-icon{
+header li:hover .icon{
     background-color: white;
 }
-header li:hover,
-header label:hover,
-header li:hover .header-icon{
+/* li:not(li:first-child):hover,/* first child sarebbe sbagliato ma funziona grazie a label:hover*/
+label:hover,
+label:hover .header-icon,
+a:hover .header-icon,
+a:hover{
     color:white;
     filter: none;
     -webkit-filter: none;
@@ -119,7 +142,7 @@ main nav ul{
     margin: auto;
 }
 main nav > ul > li{
-    margin:0 .5rem 2rem;
+    margin:0 .5rem;
 }
 main label > .selected{
     width: 2rem;
@@ -150,6 +173,19 @@ footer .player-sec{
 .container{
     height: calc(100vh - var(--footer-h));
 }
+.divider{
+    height: 1px;
+    background-color: #888;
+    width: 100%;
+    margin:1rem 0;
+}
+
+.center{
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left:50%
+}
+
 /* flex */
 .flex{
     display: flex;
@@ -166,6 +202,10 @@ footer .player-sec{
     display: flex;
     justify-content: space-between;
 }
+.flex-start-center{
+    display: flex;
+    align-items: center;
+}
 
 /* cards */
 .cards{
@@ -175,17 +215,26 @@ footer .player-sec{
     width: calc(((100vw - var(--header-w)) / 3 - .8rem));
 }
 .card{
-    /* da assegnare all imagine della card */
+    /* da assegnare all imagine della card e usa il 100%*/
+    /* width: calc(100% / 6 - .8rem); */
     width: calc((100vw - var(--header-w)) / 6 - .8rem);
     height: calc((100vw - var(--header-w)) / 6 - .8rem);
     max-width: 150px;
     max-height: 150px;
+
     background-color: aqua;
 }
 
 /* text */
 .uppercase{
     text-transform: uppercase;
+}
+.title{
+
+}
+.subtitle{
+    color :#888;
+    font-size: .7rem;
 }
 
 /* button */
@@ -214,7 +263,6 @@ label{
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    
 }
 .selected{
     background-color: greenyellow;

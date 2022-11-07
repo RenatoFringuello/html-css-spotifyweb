@@ -13,15 +13,15 @@
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- roboto -->
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"> 
+    <!-- poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;800&display=swap" rel="stylesheet"> 
     
     <!-- main style -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container flex ">
-        <header>
+        <header class="p-relative">
             <a href="#">
                 <img class="logo" src="img/logo.svg" alt="Spotify">
             </a>
@@ -31,7 +31,7 @@
                         <input class="hidden" type="radio" name="header" id="home">
                         <label for="home" class="p-relative">
                             <img class="header-icon" src="img/home.svg">
-                            Home
+                            <span>Home</span>
                             <div class="selected p-absolute"></div>
                         </label>
                     </li>
@@ -53,41 +53,51 @@
                     </li>
                 </ul>
                 <!-- playlist -->
-                <h3 class="uppercase">playlist</h3>
-                <ul>
+                <ul class="hidden-on-mobile">
                     <li>
-                        <div class="add flex">
-                            <div class="add-icon flex">
+                        <h3 class="uppercase">playlist</h3>
+                    </li>
+                    <li>
+                        <a class="add flex" href="#">
+                            <div class="icon flex">
                                 <div class="text">+</div>
                             </div>
                             <span class="text">Crea Playlist</span>
-                        </div>
+                        </a>
                     </li>
                     <li>
-                        Nome Playlist
+                        <a href="#">Nome Playlist</a>
                     </li>
                     <li>
-                        Nome Playlist
+                        <a href="#">Nome Playlist</a>
                     </li>
                     <li>
-                        Nome Playlist
+                        <a href="#">Nome Playlist</a>
                     </li>
                     <li>
-                        Nome Playlist
+                        <a href="#">Nome Playlist</a>
                     </li>
                     <li>
-                        Nome Playlist
+                        <a href="#">Nome Playlist</a>
                     </li>
                     <li>
-                        Nome Playlist
+                        <a href="#">Nome Playlist</a>
                     </li>
                     <li>
-                        Nome Playlist
-                    </li>
-                    <li>
-                        Nome Playlist
+                        <a href="#">Nome Playlist</a>
                     </li>
                 </ul>
+                <div class="personal p-absolute">
+                    <a class="" href="#">
+                        <img class="header-icon" src="img/download.svg">
+                        <span class="text">Installa app</span>
+                    </a>
+                    <div class="divider"></div>
+                    <a class="flex-start-center" href="#">
+                        <img class="icon user-img" src="img/profile.svg">
+                        <h4 class="username">John Doe</h4>
+                    </a>
+                </div>
             </nav>
         </header>
         <main>
@@ -140,41 +150,54 @@
                     </li>
                 </ul>
             </nav>
-            <section class="cards flex-between" id="recently">
-                <article class="card">
-                    
-                </article>
-                <article class="card">
-                    
-                </article>
-                <article class="card">
-                    
-                </article>
-                <article class="card">
-                    
-                </article>
-                <article class="card">
-                    
-                </article>
-                <article class="card">
-                    
-                </article>
+            <section id="recently">
+                <h2 class="title">Recently played</h2>
+                <div class="cards flex-between">
+                    <article class="card">
+                        
+                    </article>
+                    <article class="card">
+                        
+                    </article>
+                    <article class="card">
+                        
+                    </article>
+                    <article class="card">
+                        
+                    </article>
+                    <article class="card">
+                        
+                    </article>
+                    <article class="card">
+                        
+                    </article>
+                </div>
             </section>
-            <section class="cards cards-2it flex-between" id="made-for">
-                <article class="card">
-                    
-                </article>
-                <article class="card">
-                    
-                </article>
+            <section id="made-for">
+                <h2 class="title">Creato per John Doe</h2>
+                <p class="subtitle">Pi&ugrave; ascolti, pi&ugrave; accurati saranno i suggerimenti</p>
+                <div class="cards cards-2it flex-between">
+
+                    <article class="card">
+                        
+                    </article>
+                    <article class="card">
+                        
+                    </article>
+                </div>
             </section>
-            <section class="cards cards-2it flex-between" id="popular-artists">
-                <article class="card">
-                    
-                </article>
-                <article class="card">
-                    
-                </article>
+            <section id="popular-artists">
+                <h2 class="title">Artisti pi&ugrave; popolari</h2>
+                <p class="subtitle">Pi&ugrave; ascolti, pi&ugrave; accurati saranno i suggerimenti</p>
+                <div class="cards cards-2it flex-between">
+
+                    <article class="card">
+                        
+                    </article>
+                    <article class="card">
+                        
+                    </article>
+                </div>
             </section>
         </main>
     </div>
