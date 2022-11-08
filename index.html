@@ -23,13 +23,15 @@
 </head>
 <body>
     <div class="container flex ">
-        <header class="flex-between">
+        <header class="flex-between p-relative">
             <nav>
-                <a href="#">
-                    <img class="logo" src="img/logo.svg" alt="Spotify">
-                    <img class="logo-mobile" src="img/logo-small.svg" alt="Spotify">
-                </a>
                 <ul>
+                    <li class="logo">
+                        <a href="#">
+                            <img class="logo" src="img/logo.svg" alt="Spotify">
+                            <img class="logo logo-mobile" src="img/logo-small.svg" alt="Spotify">
+                        </a>
+                    </li>
                     <li>
                         <input class="hidden" type="radio" name="header" id="home" checked>
                         <label for="home" class="btn p-relative">
@@ -56,36 +58,43 @@
                     </li>
                 </ul>
                 <!-- playlist -->
-                <ul class="hidden-on-mobile">
-                    <li>
-                        <h3 class="uppercase">playlist</h3>
-                    </li>
-                    <li>
-                        <a class="add flex" href="#">
-                            <div class="icon flex">
-                                <div class="text">+</div>
-                            </div>
-                            <span class="text">Crea Playlist</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">Nome Playlist</a>
-                    </li>
-                    <li>
-                        <a href="#">Nome Playlist</a>
-                    </li>
-                    <li>
-                        <a href="#">Nome Playlist</a>
-                    </li>
-                    <li>
-                        <a href="#">Nome Playlist</a>
-                    </li>
-                    <li>
-                        <a href="#">Nome Playlist</a>
-                    </li>
-                </ul>
+                <section class="playlist hidden-on-mobile ">
+                    <h3 class="uppercase">playlist</h3>
+                    <a class="add flex" href="#">
+                        <div class="icon flex">
+                            <div class="text">+</div>
+                        </div>
+                        <span class="text">Crea Playlist</span>
+                    </a>
+                    <ul >
+                        <li>
+                            <a href="#">Nome Playlist</a>
+                        </li>
+                        <li>
+                            <a href="#">Nome Playlist</a>
+                        </li>
+                        <li>
+                            <a href="#">Nome Playlist</a>
+                        </li>
+                        <li>
+                            <a href="#">Nome Playlist</a>
+                        </li>
+                        <li>
+                            <a href="#">Nome Playlist</a>
+                        </li>
+                        <li>
+                            <a href="#">Nome Playlist</a>
+                        </li>
+                        <li>
+                            <a href="#">Nome Playlist</a>
+                        </li>
+                        <li>
+                            <a href="#">Nome Playlist</a>
+                        </li>
+                    </ul>
+                </section>
             </nav>
-            <div class="personal">
+            <div class="personal p-absolute">
                 <a href="#">
                     <img class="header-icon" src="img/download.svg">
                     <span class="text hidden-on-mobile">Installa app</span>
@@ -226,6 +235,7 @@
             </section>
             <section class="section-container" id="my-mix">
                 <h2 class="title">Creato per John Doe</h2>
+                <span class="subtitle">Pi&ugrave; ascolti, pi&ugrave; accurati saranno i suggerimenti</span>
                 <div class="cards flex flex-wrap">
                     <article class="btn card">
                         <div class="img-container p-relative">
@@ -253,6 +263,7 @@
             </section>
             <section class="section-container" id="recently">
                 <h2 class="title">Artisti pi&ugrave; popolari</h2>
+                <span class="subtitle">Pi&ugrave; ascolti, pi&ugrave; accurati saranno i suggerimenti</span>
                 <div class="cards flex flex-wrap">
                     <article class="btn card">
                         <div class="img-container wrapped-img p-relative">

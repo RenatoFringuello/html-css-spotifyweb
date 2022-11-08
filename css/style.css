@@ -37,14 +37,13 @@ header{
     padding:1rem 0 0;
     flex-direction: column;
     font-size: .8rem;
-    overflow-y: auto;
 }
 header .logo{
-    width:60%;
+    width:80%;
 }
 
 header img,
-header ul:nth-child(3){
+header .playlist:nth-child(2){
     margin-left: 1rem;
 }
 /* header nav */
@@ -54,8 +53,10 @@ header nav{
 header nav ul{
     padding-bottom:.1rem;
 }
-header nav ul > li{
-    margin:1rem 0;
+header nav ul > li:not(.logo),
+.playlist h3,
+header img.logo{
+    margin-bottom:1rem;
 }
 header li label{
     display: block;
@@ -74,6 +75,10 @@ header label > .selected{
     left:0;
 }
 /* header playlist */
+.playlist ul{
+    margin: 1rem 0;
+    overflow-y: auto;
+}
 .add .text{
     line-height: 30px;
 }
@@ -94,6 +99,7 @@ header .personal{
     left:0;
     width: 100%;
     padding:0 1rem;
+    background-color: #000;
 }
 header .personal img{
     margin: .5rem;
@@ -104,7 +110,7 @@ header .user-img{
 }
 
 /* events */
-header li:hover .icon{
+header .add:hover .icon{
     background-color: white;
 }
 
@@ -126,7 +132,7 @@ main{
     overflow-y: auto;
     background-color: #141922;
     flex-grow: 1;
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
 }
 /* premium */
 #premium{
@@ -156,7 +162,6 @@ main label > .selected{
     transform: translate(-50%,0);
 }
 /* cards */
-main .title,
 main .subtitle{
     margin-bottom:1.5rem;
 }
@@ -174,7 +179,8 @@ main .card:hover .play-album{
 /* ------------------------------------------------------------- */
 footer{
     background-color: #282828;
-    height: var(--footer-h);
+    min-height: var(--footer-h);
+    width: 100%;
     padding:1rem;
     font-size: .9rem;
 }
@@ -324,6 +330,7 @@ footer .player-sec{
 /* gray */
 header,
 main > nav,
+.subtitle,
 footer #song .btn{
     color:#888;
 }
@@ -376,7 +383,8 @@ button.btn{
     border-radius: 50%;
     background-color: white;
 }
-.range:hover .current-range{
+.range:hover .current-range,
+.selected{
     background-color: yellowgreen;
 }
 .range:hover .cursor{
@@ -389,9 +397,6 @@ label{
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-}
-.selected{
-    background-color: greenyellow;
 }
 input.hidden:checked + label > .selected{
     display:block;
@@ -472,7 +477,7 @@ input.hidden,
     }
 
     /* header */
-    header .logo,
+    header img.logo:not(.logo-mobile),
     header input.hidden:checked + label > .selected,
     .hidden-on-mobile{
         display: none;
@@ -480,6 +485,7 @@ input.hidden,
     header .logo-mobile{
         display: inline;
         height: 25px;
+        width: auto;
     }
     header .personal{
         padding: 0;
