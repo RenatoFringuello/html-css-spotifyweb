@@ -33,7 +33,10 @@ header{
     background-color: black;
     min-width: var(--header-w);
     height: 100%;
-    padding:1rem 0;
+    padding:1rem 0 0;
+    flex-direction: column;
+    font-size: .8rem;
+    overflow-y: auto;
 }
 header .logo{
     width:60%;
@@ -43,7 +46,7 @@ header .logo-mobile{
 }
 
 header img,
-header ul:nth-child(2){
+header ul:nth-child(3){
     margin-left: 1rem;
 }
 /* header nav */
@@ -92,7 +95,7 @@ header .personal{
     bottom:0;
     left:0;
     width: 100%;
-    padding:1rem;
+    padding:0 1rem;
 }
 header .personal img{
     margin: .5rem;
@@ -116,7 +119,6 @@ header input:checked + label .header-icon{
     color:white;
     filter: none;
     -webkit-filter: none;
-    cursor: pointer;
 }
 
 /* ------------------------------------------------------------- */
@@ -136,7 +138,6 @@ main{
 }
 #premium button:hover{
     transform: scale(1.1);
-    cursor: pointer;
 }
 /* nav */
 main nav{
@@ -171,29 +172,68 @@ footer{
     height: var(--footer-h);
     padding:1rem;
 }
-footer *{
-    border: 1px solid;
-}
 
-/* song */
 footer .player-sec{
-    flex-basis: 33%;
+    flex-basis: 30%;
 }
-footer .song-info{
-    padding: 0 .5rem;
+.player-sec:not(#player) i{
+    margin-right: 1rem;
 }
-footer .right,
-footer .left{
+/* song */
+#song .left{
     flex-basis: 50px;
 }
-footer .left img{
+#song .left img{
     min-width: 50px;
     width: 100%;
 }
+#song .song-info{
+    padding: 0 .5rem;
+}
+#song .song-info .title,
+#song .song-info .subtitle{
+    margin-bottom: .3rem;
+}
+#song .right{
+    flex-grow: 1;
+}
+#song a.subtitle:hover{
+    text-decoration: underline;
+} 
+#song .btn:hover{
+    color: white;
+}
 
 /* player */
+#player{
+    flex-basis: auto;
+    flex-grow: 1;
+    margin: 0 .8rem;
+}
+#player .top{
+    margin: 0 auto;
+    width: 200px;
+    font-size: 1.2rem;
+}
+#player .top .fa-circle-play{
+    font-size: 2rem;
+}
+#player .top .fa-circle-play:hover{
+    transform: scale(1.05);
+}
 
+#player .bottom{
+    font-size: .7rem;
+    margin-top: .5rem;
+}
+#player .bottom .time{
+    padding: 0 .5rem;
+}
 
+/* control-panel */
+#control-panel .range{
+    width: 50%;
+}
 
 /* ------------------------------------------------------------- */
 /*                            CLASSES                            */
@@ -245,6 +285,11 @@ footer .left img{
     display: flex;
     align-items: center;
 }
+.flex-end-center{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
 
 /* cards */
 .card{
@@ -271,9 +316,8 @@ footer .left img{
 
 /* gray */
 header,
-.subtitle,
 main > nav,
-footer .right{
+footer #song .btn{
     color:#888;
 }
 
@@ -286,6 +330,9 @@ footer{
 }
 /* button */
 .btn{
+    cursor: pointer;
+}
+button.btn{
     background-color: #0000;
     border: 2px solid;
     border-radius: 20px;
@@ -298,6 +345,34 @@ footer{
 }
 .p-absolute{
     position: absolute;
+}
+
+/* timeline */
+.range{
+    width: 100%;
+    height: 5px;
+    border-radius: 10px;
+    background-color: #595959;
+}
+.current-range{
+    width: 30%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #aaa;
+}
+.range .cursor{
+    display: none;
+    width: 15px;
+    height: 15px;
+    left: 30%;
+    border-radius: 50%;
+    background-color: white;
+}
+.range:hover .current-range{
+    background-color: yellowgreen;
+}
+.range:hover .cursor{
+    display: block;
 }
 
 /* input category */

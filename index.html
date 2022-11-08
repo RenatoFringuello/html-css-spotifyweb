@@ -21,16 +21,16 @@
 </head>
 <body>
     <div class="container flex ">
-        <header class="p-relative">
-            <a href="#">
-                <img class="logo" src="img/logo.svg" alt="Spotify">
-                <img class="logo-mobile" src="img/logo-small.svg" alt="Spotify">
-            </a>
+        <header class="flex-between">
             <nav>
+                <a href="#">
+                    <img class="logo" src="img/logo.svg" alt="Spotify">
+                    <img class="logo-mobile" src="img/logo-small.svg" alt="Spotify">
+                </a>
                 <ul>
                     <li>
                         <input class="hidden" type="radio" name="header" id="home">
-                        <label for="home" class="p-relative">
+                        <label for="home" class="btn p-relative">
                             <img class="header-icon" src="img/home.svg">
                             <span class="hidden-on-mobile">Home</span>
                             <div class="selected p-absolute"></div>
@@ -38,7 +38,7 @@
                     </li>
                     <li>
                         <input class="hidden" type="radio" name="header" id="search">
-                        <label for="search" class="p-relative">
+                        <label for="search" class="btn p-relative">
                             <img class="header-icon" src="img/search.svg">
                             <span class="hidden-on-mobile">Cerca</span> 
                             <div class="selected p-absolute"></div>
@@ -46,7 +46,7 @@
                     </li>
                     <li>
                         <input class="hidden" type="radio" name="header" id="library">
-                        <label for="library" class="p-relative">
+                        <label for="library" class="btn p-relative">
                             <img class="header-icon" src="img/libreria.svg">
                             <span class="hidden-on-mobile">La tua libreria</span> 
                             <div class="selected p-absolute"></div>
@@ -81,25 +81,19 @@
                     <li>
                         <a href="#">Nome Playlist</a>
                     </li>
-                    <li>
-                        <a href="#">Nome Playlist</a>
-                    </li>
-                    <li>
-                        <a href="#">Nome Playlist</a>
-                    </li>
                 </ul>
-                <div class="personal p-absolute">
-                    <a href="#">
-                        <img class="header-icon" src="img/download.svg">
-                        <span class="text hidden-on-mobile">Installa app</span>
-                    </a>
-                    <div class="divider hidden-on-mobile"></div>
-                    <a class="flex-start-center" href="#">
-                        <img class="icon wrapped-img user-img" src="img/profile.svg">
-                        <h4 class="username hidden-on-mobile">John Doe</h4>
-                    </a>
-                </div>
             </nav>
+            <div class="personal">
+                <a href="#">
+                    <img class="header-icon" src="img/download.svg">
+                    <span class="text hidden-on-mobile">Installa app</span>
+                </a>
+                <div class="divider hidden-on-mobile"></div>
+                <a class="flex-start-center" href="#">
+                    <img class="icon wrapped-img user-img" src="img/profile.svg">
+                    <h4 class="username hidden-on-mobile">John Doe</h4>
+                </a>
+            </div>
         </header>
         <main>
             <section id ="premium">
@@ -109,42 +103,42 @@
                 <ul class="flex-center flex-wrap">
                     <li>
                         <input class="hidden" type="radio" name="category" id="trend">
-                        <label for="trend" class="uppercase p-relative">
+                        <label for="trend" class="btn uppercase p-relative">
                             in evidenza
                             <div class="selected p-absolute"></div>
                         </label>
                     </li>
                     <li>
                         <input class="hidden" type="radio" name="category" id="podcast">
-                        <label for="podcast" class="uppercase p-relative">
+                        <label for="podcast" class="btn uppercase p-relative">
                             podcast
                             <div class="selected p-absolute"></div>
                         </label>
                     </li>
                     <li>
                         <input class="hidden" type="radio" name="category" id="charts">
-                        <label for="charts" class="uppercase p-relative">
+                        <label for="charts" class="btn uppercase p-relative">
                             classifiche
                             <div class="selected p-absolute"></div>
                         </label>
                     </li>
                     <li>
                         <input class="hidden" type="radio" name="category" id="gen">
-                        <label for="gen" class="uppercase p-relative">
+                        <label for="gen" class="btn uppercase p-relative">
                             generi e mood
                             <div class="selected p-absolute"></div>
                         </label>
                     </li>
                     <li>
                         <input class="hidden" type="radio" name="category" id="newest">
-                        <label for="newest" class="uppercase p-relative">
+                        <label for="newest" class="btn uppercase p-relative">
                             nuove uscite
                             <div class="selected p-absolute"></div>
                         </label>
                     </li>
                     <li>
                         <input class="hidden" type="radio" name="category" id="discover">
-                        <label for="discover" class="uppercase p-relative">
+                        <label for="discover" class="btn uppercase p-relative">
                             scopri
                             <div class="selected p-absolute"></div>
                         </label>
@@ -154,61 +148,60 @@
             <section class="section-container" id="recently">
                 <h2 class="title">Recently played</h2>
                 <div class="cards flex-between flex-wrap">
-                    <article class="card">
+                    <article class="btn card">
                         <img src="img/metal_lifting.jpg">
                         <div class="desc">
                             <h4 class="title">Heavy Metal</h4>
                             <span class="subtitle">subtitle</span>
                         </div>
                     </article>
-                    <article class="card">
+                    <article class="btn card">
                         <img src="img/stranger.jpeg">
                         <div class="desc">
                             <h4 class="title">Stranger Things, Vol. 1 (a Netflix Original Series Soundtrak)</h4>
                             <span class="subtitle">Kyle Dixon &amp; Michael</span>
                         </div>
                     </article>
-                    <article class="card">
+                    <article class="btn card">
                         <img src="img/aquietplace.jpeg">
                         <div class="desc">
                             <h4 class="title">A quiet place</h4>
                             <span class="subtitle">subtitle</span>
                         </div>
                     </article>
-                    <article class="card">
+                    <article class="btn card">
                         <img src="img/split.jpeg">
                         <div class="desc">
                             <h4 class="title">Split</h4>
                             <span class="subtitle">subtitle</span>
                         </div>
                     </article>
-                    <article class="card">
+                    <article class="btn card">
                         <img src="img/cure.jpeg">
                         <div class="desc">
                             <h4 class="title">A cure for wellness</h4>
                             <span class="subtitle">subtitle</span>
                         </div>
                     </article>
-                    <article class="card">
+                    <article class="btn card">
                         <img src="img/sinister.jpeg">
                         <div class="desc">
                             <h4 class="title">Sinister</h4>
                             <span class="subtitle">subtitle</span>
                         </div>
                     </article>
-                    
                 </div>
             </section>
             <section class="section-container" id="my-mix">
                 <h2 class="title">Creato per John Doe</h2>
                 <div class="cards flex flex-wrap">
-                    <article class="card">
+                    <article class="btn card">
                         <img src="img/radar.jpeg">
                         <div class="desc">
                             <h4 class="title">Release Radar</h4>
                         </div>
                     </article>
-                    <article class="card">
+                    <article class="btn card">
                         <img src="img/mixdaily.jpeg">
                         <div class="desc">
                             <h4 class="title">Daily Mix 1</h4>
@@ -219,13 +212,13 @@
             <section class="section-container" id="recently">
                 <h2 class="title">Recently played</h2>
                 <div class="cards flex flex-wrap">
-                    <article class="card">
+                    <article class="btn card">
                         <img class="wrapped-img" src="img/youg.jpeg">
                         <div class="desc">
                             <h4 class="title">Lana Del Rey</h4>
                         </div>
                     </article>
-                    <article class="card">
+                    <article class="btn card">
                         <img class="wrapped-img" src="img/einaudi.jpeg">
                         <div class="desc">
                             <h4 class="title">Ludovico Einaudi</h4>
@@ -242,21 +235,38 @@
             </div>
             <div class="song-info">
                 <h4 class="title">Sinister</h4>
-                <span class="subtitle">Brano Nome</span>
+                <a class="btn subtitle">Brano Nome</a>
             </div>
-            <div class="right flex-between flex-wrap">
-                <i class="fa-regular fa-heart"></i>
-                <i class="fa-regular fa-folder"></i>
+            <div class="right flex-start-center flex-wrap">
+                <i class="fa-regular fa-heart btn"></i>
+                <i class="fa-regular fa-folder btn"></i>
             </div>
         </section>
         <section class="player-sec" id="player">
             <div class="top flex-between-center">
-                
+                <i class="fa-solid fa-shuffle btn"></i>
+                <i class="fa-solid fa-backward-step btn"></i>
+                <i class="fa-regular fa-circle-play btn"></i>
+                <i class="fa-solid fa-forward-step btn"></i>
+                <i class="fa-solid fa-rotate-right btn"></i>
             </div>
-            <div class="bottom flex-between-center"></div>
+            <div class="bottom flex-between-center">
+                <div class="time current-time">0:25</div>
+                <div class="range p-relative btn">
+                    <div class="current-range"></div>
+                    <div class="cursor p-absolute center"></div>
+                </div>
+                <div class="time song-time">4:35</div>
+            </div>
         </section>
-        <section class="player-sec flex-between-center">
-
+        <section class="player-sec flex-end-center" id="control-panel">
+            <i class="fa-solid fa-list btn"></i>
+            <i class="fa-sharp fa-solid fa-desktop btn"></i>
+            <i class="fa-solid fa-volume-high btn"></i>
+            <div class="range p-relative btn">
+                <div class="current-range"></div>
+                <div class="cursor p-absolute center"></div>
+            </div>
         </section>
     </footer>
 </body>
