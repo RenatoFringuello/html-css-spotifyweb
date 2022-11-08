@@ -29,7 +29,7 @@
                 </a>
                 <ul>
                     <li>
-                        <input class="hidden" type="radio" name="header" id="home">
+                        <input class="hidden" type="radio" name="header" id="home" checked>
                         <label for="home" class="btn p-relative">
                             <img class="header-icon" src="img/home.svg">
                             <span class="hidden-on-mobile">Home</span>
@@ -102,8 +102,8 @@
             <nav class="flex-center flex-wrap">
                 <ul class="flex-center flex-wrap">
                     <li>
-                        <input class="hidden" type="radio" name="category" id="trend">
-                        <label for="trend" class="btn uppercase p-relative">
+                        <input class="hidden" type="radio" name="category" id="trend" checked>
+                        <label for="trend" class="btn uppercase p-relative"> 
                             in evidenza
                             <div class="selected p-absolute"></div>
                         </label>
@@ -148,43 +148,73 @@
             <section class="section-container" id="recently">
                 <h2 class="title">Recently played</h2>
                 <div class="cards flex-between flex-wrap">
-                    <article class="btn card">
-                        <img src="img/metal_lifting.jpg">
+                    <article class="btn card ">
+                        <div class="img-container p-relative">
+                            <div class="play-album p-absolute btn">
+                                <i class="fa-regular fa-circle-play p-absolute center"></i>
+                            </div>
+                            <img src="img/metal_lifting.jpg">
+                        </div>
                         <div class="desc">
                             <h4 class="title">Heavy Metal</h4>
                             <span class="subtitle">subtitle</span>
                         </div>
                     </article>
                     <article class="btn card">
-                        <img src="img/stranger.jpeg">
+                        <div class="img-container p-relative">
+                            <div class="play-album p-absolute btn">
+                                <i class="fa-regular fa-circle-play p-absolute center"></i>
+                            </div>
+                            <img src="img/stranger.jpeg">
+                        </div>
                         <div class="desc">
                             <h4 class="title">Stranger Things, Vol. 1 (a Netflix Original Series Soundtrak)</h4>
                             <span class="subtitle">Kyle Dixon &amp; Michael</span>
                         </div>
                     </article>
                     <article class="btn card">
-                        <img src="img/aquietplace.jpeg">
+                        <div class="img-container p-relative">
+                            <div class="play-album p-absolute btn">
+                                <i class="fa-regular fa-circle-play p-absolute center"></i>
+                            </div>
+                            <img src="img/aquietplace.jpeg">
+                        </div>
                         <div class="desc">
                             <h4 class="title">A quiet place</h4>
                             <span class="subtitle">subtitle</span>
                         </div>
                     </article>
                     <article class="btn card">
-                        <img src="img/split.jpeg">
+                        <div class="img-container p-relative">
+                            <div class="play-album p-absolute btn">
+                                <i class="fa-regular fa-circle-play p-absolute center"></i>
+                            </div>
+                            <img src="img/split.jpeg">
+                        </div>
                         <div class="desc">
                             <h4 class="title">Split</h4>
                             <span class="subtitle">subtitle</span>
                         </div>
                     </article>
                     <article class="btn card">
-                        <img src="img/cure.jpeg">
+                        <div class="img-container p-relative">
+                            <div class="play-album p-absolute btn">
+                                <i class="fa-regular fa-circle-play p-absolute center"></i>
+                            </div>
+                            <img src="img/cure.jpeg">
+                        </div>
                         <div class="desc">
                             <h4 class="title">A cure for wellness</h4>
                             <span class="subtitle">subtitle</span>
                         </div>
                     </article>
                     <article class="btn card">
-                        <img src="img/sinister.jpeg">
+                        <div class="img-container p-relative">
+                            <div class="play-album p-absolute btn">
+                                <i class="fa-regular fa-circle-play p-absolute center"></i>
+                            </div>
+                            <img src="img/sinister.jpeg">
+                        </div>
                         <div class="desc">
                             <h4 class="title">Sinister</h4>
                             <span class="subtitle">subtitle</span>
@@ -196,13 +226,23 @@
                 <h2 class="title">Creato per John Doe</h2>
                 <div class="cards flex flex-wrap">
                     <article class="btn card">
-                        <img src="img/radar.jpeg">
+                        <div class="img-container p-relative">
+                            <div class="play-album p-absolute btn">
+                                <i class="fa-regular fa-circle-play p-absolute center"></i>
+                            </div>
+                            <img src="img/radar.jpeg">
+                        </div>
                         <div class="desc">
                             <h4 class="title">Release Radar</h4>
                         </div>
                     </article>
                     <article class="btn card">
-                        <img src="img/mixdaily.jpeg">
+                        <div class="img-container p-relative">
+                            <div class="play-album p-absolute btn">
+                                <i class="fa-regular fa-circle-play p-absolute center"></i>
+                            </div>
+                            <img src="img/mixdaily.jpeg">
+                        </div>
                         <div class="desc">
                             <h4 class="title">Daily Mix 1</h4>
                         </div>
@@ -210,16 +250,26 @@
                 </div>
             </section>
             <section class="section-container" id="recently">
-                <h2 class="title">Recently played</h2>
+                <h2 class="title">Artisti pi&ugrave; popolari</h2>
                 <div class="cards flex flex-wrap">
                     <article class="btn card">
-                        <img class="wrapped-img" src="img/youg.jpeg">
+                        <div class="img-container wrapped-img p-relative">
+                            <div class="play-album p-absolute btn">
+                                <i class="fa-regular fa-circle-play p-absolute center"></i>
+                            </div>
+                            <img src="img/youg.jpeg">
+                        </div>
                         <div class="desc">
                             <h4 class="title">Lana Del Rey</h4>
                         </div>
                     </article>
                     <article class="btn card">
-                        <img class="wrapped-img" src="img/einaudi.jpeg">
+                        <div class="img-container wrapped-img p-relative">
+                            <div class="play-album p-absolute btn">
+                                <i class="fa-regular fa-circle-play p-absolute center"></i>
+                            </div>
+                            <img src="img/einaudi.jpeg">
+                        </div>
                         <div class="desc">
                             <h4 class="title">Ludovico Einaudi</h4>
                         </div>
@@ -233,11 +283,11 @@
             <div class="left flex">
                 <img src="img/sinister.jpeg" alt="Song's Thumbnail">
             </div>
-            <div class="song-info">
+            <div class="song-info flex">
                 <h4 class="title">Sinister</h4>
                 <a class="btn subtitle">Brano Nome</a>
             </div>
-            <div class="right flex-start-center flex-wrap">
+            <div class="right flex-center flex-wrap">
                 <i class="fa-regular fa-heart btn"></i>
                 <i class="fa-regular fa-folder btn"></i>
             </div>

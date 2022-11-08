@@ -32,6 +32,7 @@ nav ul{
 header{
     background-color: black;
     min-width: var(--header-w);
+    width: var(--header-w);
     height: 100%;
     padding:1rem 0 0;
     flex-direction: column;
@@ -40,9 +41,6 @@ header{
 }
 header .logo{
     width:60%;
-}
-header .logo-mobile{
-    display: none;
 }
 
 header img,
@@ -162,6 +160,13 @@ main .title,
 main .subtitle{
     margin-bottom:1.5rem;
 }
+main .card:hover .play-album{
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 4rem;
+    background-color: #0005;
+}
 
 
 /* ------------------------------------------------------------- */
@@ -171,28 +176,30 @@ footer{
     background-color: #282828;
     height: var(--footer-h);
     padding:1rem;
+    font-size: .9rem;
 }
 
 footer .player-sec{
-    flex-basis: 30%;
+    flex-basis: 27%;
 }
 .player-sec:not(#player) i{
     margin-right: 1rem;
 }
 /* song */
-#song .left{
-    flex-basis: 50px;
-}
 #song .left img{
-    min-width: 50px;
-    width: 100%;
+    width: 50px;
 }
 #song .song-info{
-    padding: 0 .5rem;
+    padding: 0 .8rem;
+    flex-direction: column;
+    flex-grow: 1;
+}
+#song .song-info .title{
+    font-size: .8rem;
 }
 #song .song-info .title,
 #song .song-info .subtitle{
-    margin-bottom: .3rem;
+    line-height: 1rem;
 }
 #song .right{
     flex-grow: 1;
@@ -208,15 +215,15 @@ footer .player-sec{
 #player{
     flex-basis: auto;
     flex-grow: 1;
-    margin: 0 .8rem;
+    padding:0 1rem;
 }
 #player .top{
     margin: 0 auto;
     width: 200px;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 #player .top .fa-circle-play{
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 #player .top .fa-circle-play:hover{
     transform: scale(1.05);
@@ -224,15 +231,14 @@ footer .player-sec{
 
 #player .bottom{
     font-size: .7rem;
-    margin-top: .5rem;
-}
-#player .bottom .time{
-    padding: 0 .5rem;
+    margin-top: .8rem;
 }
 
 /* control-panel */
 #control-panel .range{
+    min-width: 80px;
     width: 50%;
+    margin: 0;
 }
 
 /* ------------------------------------------------------------- */
@@ -247,6 +253,7 @@ footer .player-sec{
 }
 .wrapped-img{
     border-radius: 50%;
+    overflow: hidden;
 }
 .divider{
     height: 1px;
@@ -353,6 +360,7 @@ button.btn{
     height: 5px;
     border-radius: 10px;
     background-color: #595959;
+    margin: 0 .5rem;
 }
 .current-range{
     width: 30%;
@@ -376,9 +384,6 @@ button.btn{
 }
 
 /* input category */
-input.hidden{
-    display: none;
-}
 label{
     user-select: none;
     -webkit-user-select: none;
@@ -391,7 +396,12 @@ label{
 input.hidden:checked + label > .selected{
     display:block;
 }
-:not(input.hidden:checked) + label > .selected{
+
+/* display none */
+header .logo-mobile,
+input.hidden,
+:not(input.hidden:checked) + label > .selected,
+.play-album{
     display: none;
 }
 
@@ -411,7 +421,7 @@ input.hidden:checked + label > .selected{
 }
 /* large <1200 */
 @media screen and (max-width: 1199px) {
-    
+    /* è uguale alla versione desktop */
 }
 /* medium <992 */
 @media screen and (max-width: 991px) {
@@ -425,6 +435,29 @@ input.hidden:checked + label > .selected{
 }
 /* small <768 */
 @media screen and (max-width: 767px) {
+    /* footer */
+    footer{
+        padding:.5rem;
+    }
+    .player-sec:not(#player) i{
+        margin-right: .5rem;
+    }
+        /* song */
+    #song .left img{
+        width: 40px;
+    }
+    #song .right{
+        padding-left: .5rem;
+    }
+        /* player */
+    #player{
+        padding: 0 .5rem;
+    }
+    #player .top{
+        width: 150px;
+    }
+    
+    /* class */
     .cards{
         justify-content: flex-start;
     }
@@ -439,18 +472,15 @@ input.hidden:checked + label > .selected{
     }
 
     /* header */
-    header .logo{
+    header .logo,
+    header input.hidden:checked + label > .selected,
+    .hidden-on-mobile{
         display: none;
     }
     header .logo-mobile{
         display: inline;
         height: 25px;
     }
-
-    header input.hidden:checked + label > .selected{
-        display: none;
-    }
-
     header .personal{
         padding: 0;
         display: flex;
@@ -460,8 +490,22 @@ input.hidden:checked + label > .selected{
     header .personal img{
         margin: .5rem 0;
     }
-    .hidden-on-mobile{
-        display: none;
+
+    /* footer */
+        /* song */
+    #song .left img{
+        width: 30px;
     }
-    
+    #song .song-info{
+        padding: 0 .5rem;
+    }
+        /* player */
+    #player .top{
+        margin: 0;
+        width: 100%;
+    }
+        /* control-panel */
+    #control-panel .range{
+        min-width: 60px;
+    }
 }
