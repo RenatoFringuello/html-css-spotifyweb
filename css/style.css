@@ -424,10 +424,6 @@ input.hidden,
         max-width: 200px;
     }
 }
-/* large <1200 */
-@media screen and (max-width: 1199px) {
-    /* è uguale alla versione desktop */
-}
 /* medium <992 */
 @media screen and (max-width: 991px) {
     .cards{
